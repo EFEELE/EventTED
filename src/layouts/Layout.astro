@@ -19,10 +19,11 @@ const SEO = {
 };
 
 const twitterimage = `${siteUrl}${SEO.ogimage.url}`;
+const currentLang = Astro.currentLocale
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={currentLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -30,7 +31,7 @@ const twitterimage = `${siteUrl}${SEO.ogimage.url}`;
     <meta name="generator" content={Astro.generator} />
     <title>{SEO.title}</title>
     <meta name="description" content={description} />
-	
+
     <!-- Favicon for different platforms -->
     <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
